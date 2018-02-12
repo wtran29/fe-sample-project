@@ -1,0 +1,60 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />﻿
+</head>
+<body>
+<div class="nav-links">
+	<ul>
+		<li class="icon"><div class="icon"><i class="fa fa-shopping-cart"></i></div><p>Cart.ly</p></li>
+		<li><a class="shop" [routerLink]="['shop']">Shop</a></li>
+	</ul>
+</div>
+	<div class="cartlink">
+		<ul>
+			<li><a class="cart" [routerLink]="['cart']">Your Cart</a></li>
+			<!-- <li><button type="button" class="btn btn-primary cart" data-toggle="modal" data-target="#cartModal" (click)="openModal()">Your Cart</button></li> -->
+			<li><div class="count"><p>{{(cartItems$ | async).length}}</p></div></li>
+		</ul>
+	</div>
+	<!-- <fieldset class="list">
+		<div><h2>Admin Create</h2></div>
+		<div class="create">
+			<form (submit)="create(); dataForm.reset()" #dataForm="ngForm">
+				<label>Id</label>
+				<input type="number" name="id"
+					[(ngModel)]="newProduct.id"
+					#id="ngModel"
+				/>
+				<div class="img">
+					<label>Image here</label>
+					<br>
+					<img src="{{ newProduct.image }}" alt="" width="310">
+					<input class="list-form" type="text" name="image" placeholder="Type in link to add image"
+						required
+						[(ngModel)]="newProduct.image"
+						#image='ngModel' 
+					/>
+				</div>
+				<div class="group-1">
+					<label class="edit-labels">Title </label>
+					<br>
+					<input class="list-form" type="text" name="title"
+						required
+						[(ngModel)]="newProduct.title"
+						#title="ngModel"
+					/>
+					<label>Price </label>
+					<br>
+					<input class="list-form" type="number" name="price" value="USD" placeholder="Price" 
+						required
+						min=1
+						[(ngModel)]="newProduct.price"
+						#price="ngModel"
+					/>
+					</div>
+				<br><br>
+				<input class="list-submit" type="submit" value="Create Me">
+			</form>
+		</div>
+	</fieldset> -->
+</body>
+<router-outlet></router-outlet>

@@ -1,0 +1,79 @@
+<head>
+	<meta name= viewport content= width=device-width initial-scale=1 />﻿
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<!-- <div id="cartModal" class="modal fade top" tabindex="-1" role="dialog" [ngStyle]="{'display':display}" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-full-height modal-top" role="document">
+		<div class="modal-content">
+			<div class="modal-header"></div>
+			
+			<div class="modal-title">
+				<h3>Your Cart</h3>
+			</div>
+			<div class="modal-body">
+				
+				<div class="nothing" *ngIf="cartItems[{}] || cartItems == 0">
+		<p>Nothing in your cart,</p>
+		<p>start shopping.</p>
+	</div>
+	<div>
+		<div *ngIf="!cartItems[{}]">
+				<div class="item" *ngFor="let item of cartItems">
+				<div class="delete"><button class="delete" (click)="delete(item)">&times;</button></div>
+				<div class="table">	
+				<table border="1">
+					<tr>
+						<td><div class="img"><img src="{{ item.image }}" width="50px" height="50px"></div></td>
+						<td>
+							<div class="desc">
+								<p>{{item.title}}</p>
+								<p class="price">{{item.price | currency : fractionalized}}</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="border-top">
+		<h2 class="left">Total</h2>
+		<div *ngIf="cartItems[{}] || cartItems == 0">
+			<h2 class="right">{{total() | async | currency : '$' : true : '1.0-0' }}</h2>
+		</div>
+		<div *ngIf="cartItems.length > 0">
+			<h2 class="right">{{total() | async | currency : fractionalized}}</h2>
+		</div>
+	</div>
+			<button class="close" aria-label="Close" (click)="closeModal()"><span aria-hidden="true">Back</span></button>
+		</div>
+	</div>
+</div> -->
+
+
+<div class="container">
+	<h2>Shop our featured collection</h2>
+	<div class="products">	
+		<div class="product" *ngFor="let product of products; let idx='index'">
+			<!-- <fieldset> -->
+				<div>
+					<form (submit)="addProduct(product)" #dataForm="ngForm">
+						
+							<img class="img-border" src="{{ product.image }}" width="250px">
+							<br>
+							<br>
+						
+						<div class="group">
+							<p class="edit-labels">{{product.title}}</p>
+							
+							<p class="price">{{product.price | currency : fractionalized}}</p>
+							
+							<input type="submit" value="Add to cart">
+						</div>
+					</form>
+				</div>
+			<!-- </fieldset> -->
+		</div>
+	</div>
+</div>

@@ -1,0 +1,192 @@
+* {
+	font-family: "Lato";
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	min-height: 1500px;
+	height: 100%;
+}
+.nav-links {
+	display: inline;
+	
+
+	
+}
+
+.cartlink {
+	display: inline;
+	text-align: right;
+	float: right;
+	padding-right:25px;
+}
+
+ul li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+ul {
+	margin:0 auto;
+	text-align: left;
+	padding-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 15px;
+
+}
+
+p {
+	font-size: 23px;
+	display: inline;
+	vertical-align: top;
+	margin: 0 auto;
+	font-weight: bold;
+	padding-left: 8px;
+	color: white;
+	
+}
+
+
+ul li a:active{
+	text-decoration: underline;
+	color: white;
+	/*border-bottom: 2px solid white!important;*/
+	
+}
+
+li a {
+	margin-bottom: 5px;
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+	
+
+}
+
+
+a:selected{
+	text-decoration: underline!important;
+}
+button {
+	width:100px;
+	height: 25px;
+	border: 3px;
+	color: white;
+	font-weight: bold;
+	background-color: #333399;
+	text-shadow: 1px 1px black;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 12px;
+	
+}
+body {
+	font-family: "Lato";
+	background: mediumblue;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	margin: 0 auto;
+	height: 46px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+i {
+	font-weight: bold;
+	color: white;
+	font-size: 25px;
+	font-size: 25px;
+	padding-left:3px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.icon {
+	display: inline;
+	vertical-align: top;
+
+}
+
+li.icon {
+	margin-top: -5px;
+}
+
+.count {
+
+	background:white;
+	border-radius: 3px;
+	color: mediumblue;
+	font-weight: bold;
+	width: 35px;
+	height:19px;
+	text-align: center;
+	margin-top: -2px;
+	padding-top: 3px;
+}
+
+.count p{
+	
+	font-size: 15px;
+	color: mediumblue;
+	text-align: center;
+	padding: 0;
+}
+a.shop{
+	margin-left: 10px;
+	
+}
+
+
+/* ----------- Galaxy S6 ----------- */
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+  a.cart{
+  	margin-left: 69px;
+  }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+  a.cart{
+  	margin-left: 340px;
+  }
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  a.cart {
+  	padding-left: 200px;
+  }
+
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+  a.cart{
+  	padding-left:200px;
+  } 
+}

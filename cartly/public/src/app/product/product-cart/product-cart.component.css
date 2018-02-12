@@ -1,0 +1,123 @@
+
+div.cart {
+	text-align: center;
+	margin: 20px;
+	opacity: .9;
+}
+
+* {
+	text-align: center;
+
+}
+
+div.img {
+	text-align: left;
+}
+img{
+	border: 1px solid;
+}
+div.desc {
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+div.desc p {
+	margin: 0 auto;
+	vertical-align: top;
+	text-align: right;
+	
+}
+
+p.price {
+	font-size: 20px;
+}
+div.delete{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto;
+	text-align: right;
+	float:right;
+}
+button.delete{
+	vertical-align: top;
+	border-radius: 100%;
+	border: none;
+	color: white;
+	margin: 0 auto;
+	font-size: x-small;
+	width: 14px;
+	padding-left: 4px;
+}
+
+.nothing {
+	padding-top: 35px;
+	padding-bottom: 40px;
+}
+.nothing p {
+	font-size: 24px;
+	margin: 0 auto;
+}
+
+div.border-top {
+	width: 280px;
+	text-align: center;
+	margin: 0 auto;
+	border-top: 2px solid;
+}
+
+h2.left {
+	text-align: left;
+}
+
+h2.right {
+	text-align: right;
+	margin-top: -46px;
+
+}
+
+h2.title {
+	padding-top: 60px;
+}
+
+button.close {
+	margin-top: 35px;
+	margin-bottom: 40px;
+	background: white;
+	color: black;
+	border-radius: 3px;
+	width:117px;
+	height:30px;
+	border: 1px solid grey;
+}
+
+div.item {
+	margin-bottom: 10px;
+	text-align: center;
+	vertical-align: top;
+	margin: 0 auto;
+	width: 280px;
+}
+
+tr {
+	display: inline;
+}
+
+div.table {
+	text-align: center;
+	display: inline;
+}
+
+table{
+	margin-bottom: 10px;
+}
+table td:nth-child(2) {
+	width:200px;
+	text-align: right;
+}
+
+table td:last-child	{
+	vertical-align: top;
+}
+
+

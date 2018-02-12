@@ -1,0 +1,129 @@
+body {
+	font-family: 'lato';
+}
+
+.img {
+	width: 310px;
+	display: inline-block;
+	vertical-align: top;
+	margin:0 auto;
+	padding: 10px;
+}
+
+
+.modal-body {
+	width: 100%;
+	min-height: 500px;
+}
+
+.modal-content {
+	width:100%;
+	min-height: 500px;
+	position: absolute;
+	background: white;
+	opacity: 0.9;
+}
+
+.products {
+  display: flex;
+
+  justify-content: center;
+
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+
+.product {
+  	border: 1px solid grey;
+	border-radius: 3px;
+	box-shadow: 2px 3px lightgrey;
+  	
+  	margin: 10px;
+}
+
+.product:hover, .product:hover input {
+	border: 2px solid blue;
+	color: blue;
+
+}
+
+.group p {
+	color:black!important;
+}
+
+.fieldset {
+	padding: 0;
+}
+
+.group {
+	text-align: center;
+}
+
+p {
+	margin: 0 auto;
+}
+
+input {
+	background: white;
+	color: black;
+	border-radius: 3px;
+	width:117px;
+	height:30px;
+	border: 1px solid grey;
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
+
+p.price {
+	font-size: 20px;
+}
+
+h2 {
+	margin-left: 10px;
+}
+
+/* ----------- Galaxy S6 ----------- */
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+  h2 {
+  	text-align: center;
+  }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+  h2 {
+  	text-align: center;
+  }
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  div.product{
+  	width: 300px;
+  } 
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+  div.product{
+  	width: 300px;
+  } 
+}

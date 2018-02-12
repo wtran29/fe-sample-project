@@ -1,0 +1,39 @@
+<div class="cart">
+	
+	<h2 class="title">Your Cart</h2>
+	<div class="nothing" *ngIf="cartItems[{}] || cartItems == 0">
+		<p>Nothing in your cart,</p>
+		<p>start shopping.</p>
+	</div>
+	<div>
+		<div *ngIf="!cartItems[{}]">
+				<div class="item" *ngFor="let item of cartItems">
+				<div class="delete"><button class="delete" (click)="delete(item)">&times;</button></div>
+				<div class="table">	
+				<table>
+					<tr>
+						<td><div class="img"><img src="{{ item.image }}" width="50px" height="50px"></div></td>
+						<td>
+							<div class="desc">
+								<p>{{item.title}}</p>
+								<p class="price">{{item.price | currency : fractionalized}}</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="border-top">
+		<h2 class="left">Total</h2>
+		<div *ngIf="cartItems[{}] || cartItems == 0">
+			<h2 class="right">{{total() | async | currency : '$' : true : '1.0-0' }}</h2>
+		</div>
+		<div *ngIf="cartItems.length > 0">
+			<h2 class="right">{{total() | async | currency : fractionalized}}</h2>
+		</div>
+	</div>
+	<button class="close" [routerLink]="['']">Back</button>
+</div>
