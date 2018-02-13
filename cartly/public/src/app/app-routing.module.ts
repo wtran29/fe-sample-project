@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { ProductComponent } from './product/product.component';
 import { ProductManageComponent } from './product/product-manage/product-manage.component';
 import { ProductCartComponent } from './product/product-cart/product-cart.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
 
 
 const routes: Routes = [
@@ -18,6 +18,11 @@ const routes: Routes = [
 		children: [
 			{ path: 'shop', component: ProductManageComponent },
 			{ path: 'cart', component: ProductCartComponent}]	
+	},
+	{
+		path: 'secretfile',
+		component: ProductCreateComponent,
+		pathMatch: 'full'
 	},
 
 ];

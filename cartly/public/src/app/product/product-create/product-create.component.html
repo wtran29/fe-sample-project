@@ -1,0 +1,67 @@
+<fieldset class="list">
+	<div><h2>Admin Create</h2></div>
+	<div class="create">
+		<form (submit)="create(); dataForm.reset()" #dataForm="ngForm">
+			<label>Id</label>
+			<input type="number" name="id"
+				[(ngModel)]="newProduct.id"
+				#id="ngModel"
+			/>
+			<div class="img">
+				<label>Image here</label>
+				<br>
+				<img src="{{ newProduct.image }}" alt="" width="310">
+				<input class="list-form" type="text" name="image" placeholder="Type in link to add image"
+					required
+					[(ngModel)]="newProduct.image"
+					#image='ngModel' 
+				/>
+			</div>
+			<div class="group-1">
+				<label class="edit-labels">Title </label>
+				<br>
+				<input class="list-form" type="text" name="title"
+					required
+					[(ngModel)]="newProduct.title"
+					#title="ngModel"
+				/>
+				<label>Price </label>
+				<br>
+				<input class="list-form" type="number" name="price" value="USD" placeholder="Price" 
+					required
+					min=1
+					[(ngModel)]="newProduct.price"
+					#price="ngModel"
+				/>
+				</div>
+			<br><br>
+			<input class="list-submit" type="submit" value="Create Me">
+		</form>
+	</div>
+</fieldset>
+
+<div class="container">
+	<h2>Shop our featured collection</h2>
+	<div class="products">	
+		<div class="product" *ngFor="let product of products; let idx='index'">
+			<fieldset>
+				<div>
+					<form (submit)="addProduct(product)" #dataForm="ngForm">
+						
+							<img class="img-border" src="{{ product.image }}" width="250px">
+							<br>
+							<br>
+						
+						<div class="group">
+							<p class="edit-labels">{{product.title}}</p>
+							
+							<p class="price">{{product.price | currency : fractionalized}}</p>
+							
+							<input type="submit" value="Add to cart">
+						</div>
+					</form>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</div>

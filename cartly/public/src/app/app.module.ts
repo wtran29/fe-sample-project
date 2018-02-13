@@ -16,6 +16,7 @@ import { ProductManageComponent } from './product/product-manage/product-manage.
 import { UserService } from './user/user.service';
 import { ProductService } from './product/product.service';
 import { ProductCartComponent } from './product/product-cart/product-cart.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductCartComponent } from './product/product-cart/product-cart.compon
     UserComponent,
     ProductComponent,
     ProductManageComponent,
-    ProductCartComponent
+    ProductCartComponent,
+    ProductCreateComponent
     
   ],
   imports: [
