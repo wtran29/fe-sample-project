@@ -13,8 +13,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  newProduct: Product = new Product();
-  products: Array<Product>;
+  // newProduct: Product = new Product();
+  products: Array<Product> = [];
   cart: Product[] = [];
   item: Product;
   product: Product;
@@ -37,7 +37,7 @@ export class ProductComponent implements OnInit {
   	// 	console.log(this.products);
   	// 	this.products = products;
   	// });
-
+    
   }
 
   // openModal(){
@@ -51,17 +51,17 @@ export class ProductComponent implements OnInit {
   // }
   
   ngOnInit() {
-  	this.index();
+  	// this.index();
   }
 
-  index(){
-  	console.log('retrieving collection')
-  	this._productService.collection()
-  	.then((collection)=>{
-  		console.log('retrieved the collection from db', collection);
-  		this.products = collection;
-  	})
-  }
+  // index(){
+  // 	console.log('retrieving collection')
+  // 	this._productService.collection()
+  // 	.then((collection)=>{
+  // 		console.log('retrieved the collection from db', collection);
+  // 		this.products = collection;
+  // 	})
+  // }
 
   // create(){
   // 	this._productService.createProduct(this.newProduct)

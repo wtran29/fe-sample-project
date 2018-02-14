@@ -14,8 +14,8 @@ export class ProductCartComponent implements OnInit {
   cartItems$: Observable<Product[]> = of([]);
   cartItems: Product[] = [];
   item: Product;
-  display = 'none';
-  backdrop;
+  // display = 'none';
+  // backdrop;
 
   constructor(private _productService: ProductService) { 
   	this.cartItems$ = this._productService.getItems();
@@ -40,13 +40,13 @@ export class ProductCartComponent implements OnInit {
   }
 
 
-  openModal(){
-  	console.log('open modal');
-  	this.display = 'block';
-  	this.backdrop = 'static';
-  }
+  // openModal(){
+  // 	console.log('open modal');
+  // 	this.display = 'block';
+  // 	this.backdrop = 'static';
+  // }
 
-  closeModal(){
-  	this.display = 'none';
-  }
+  // closeModal(){
+  // 	this.display = 'none';
+  // }
 }

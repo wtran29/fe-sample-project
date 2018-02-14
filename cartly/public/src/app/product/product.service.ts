@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class ProductService {
+  
   productObservable: BehaviorSubject<Product[]> = new BehaviorSubject([]);
   cartItems: Product[] = [];
   
@@ -15,7 +16,7 @@ export class ProductService {
   		this.cartItems = items;
   	})
   }
-
+  
   update(item: Product){
   	this.productObservable.next([...this.cartItems, item]);
   }
@@ -32,17 +33,17 @@ export class ProductService {
   		},0);
   	})
   }
-  createProduct(product){
-  	return this._http.post('/products/create', product)
-  	.map((res)=> res.json())
-  	.toPromise();
-  }
+  // createProduct(product){
+  // 	return this._http.post('/products/create', product)
+  // 	.map((res)=> res.json())
+  // 	.toPromise();
+  // }
 
-  collection(){
-  	return this._http.get('/products/index')
-  	.map((res)=> res.json())
-  	.toPromise();
-  }
-
+  // collection(){
+  // 	return this._http.get('/products/index')
+  // 	.map((res)=> res.json())
+  // 	.toPromise();
+  // }
+    
 
 }

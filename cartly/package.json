@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajv": "^6.1.1",
     "angular2-fontawesome": "^5.2.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

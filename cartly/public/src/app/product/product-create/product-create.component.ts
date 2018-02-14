@@ -28,31 +28,24 @@ export class ProductCreateComponent implements OnInit {
 		this.cartItems$.subscribe((items)=>{
 			items;
 		})
+	  	
+
+
 
      }
 
   ngOnInit() {
-  }
-  
-  index(){
-  	console.log('retrieving collection')
-  	this._productService.collection()
-  	.then((collection)=>{
-  		console.log('retrieved the collection from db', collection);
-  		this.products = collection;
-  	})
+  	
+
   }
 
-  create(){
-  	this._productService.createProduct(this.newProduct)
-  	.then((product)=>{
-  		if(product.errors){
-  			console.log(product.errors);
-  		}
-  		else{
-  			console.log('created product');
-  			this.index();
-  		}
-  	})
-  }
+  // index(){
+  // 	console.log('retrieving collection')
+  // 	this._productService.collection()
+  // 	.then((collection)=>{
+  // 		console.log('retrieved the collection from db', collection);
+  // 		this.products = collection;
+  // 	})
+  // }
+  
 }

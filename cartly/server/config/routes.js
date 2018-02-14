@@ -9,8 +9,8 @@ module.exports=(app)=>{
 	
 
 	// products
-	app.get('/products/index', products.index);
-	app.post('/products/create', products.create);
+	// app.get('/products/index', products.index);
+	// app.post('/products/create', products.create);
 	
 
 	app.all('*', (req,res,next)=>{

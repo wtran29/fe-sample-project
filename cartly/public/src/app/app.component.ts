@@ -11,12 +11,14 @@ import { Product } from './product/product';
 export class AppComponent {
 
 	cartItems$: Observable<Product[]>;
-
+	products: Array<Product> = [];
 	// public location: Location
 	constructor(private _productService: ProductService) {
 		this.cartItems$ = this._productService.getItems();
 		this.cartItems$.subscribe((items)=>{
 			items;
 		})
+
+		
 	}
 }
